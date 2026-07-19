@@ -1,0 +1,104 @@
+/* ---------- Reset básico ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+/* ---------- Navegación (base.html) ---------- */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background-color: #2c3e50;
+}
+
+nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav span {
+    color: #bdc3c7;
+    margin-left: auto;
+}
+
+nav button {
+    background: none;
+    border: 1px solid #ecf0f1;
+    color: #ecf0f1;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ---------- Contenido principal ---------- */
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+article {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+article h2 a {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+/* ---------- Formularios (usa la clase 'form-control'
+   que agrega BaseStyledForm — ver punto 13.1) ---------- */
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.7rem;
+    margin-bottom: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #2c3e50;
+}
+
+form button[type="submit"] {
+    background-color: #2c3e50;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+form button[type="submit"]:hover {
+    background-color: #1a252f;
+}
+
+/* ---------- Errores de validación ---------- */
+ul.errorlist {
+    color: #c0392b;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+}
