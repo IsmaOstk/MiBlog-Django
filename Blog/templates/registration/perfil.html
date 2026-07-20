@@ -1,0 +1,19 @@
+<!-- perfil.html -->
+{% extends 'base.html' %}
+{% block title %}Mi perfil{% endblock %}
+{% block content %}
+<h1>Mi perfil</h1>
+<p><strong>Usuario:</strong> {{ usuario.username }}</p>
+<p><strong>Email:</strong> {{ usuario.email }}</p>
+<p><strong>Miembro desde:</strong> {{ usuario.date_joined|date:"d/m/Y" }}</p>
+
+<a href="{% url 'perfil_editar' %}">Editar perfil</a>
+<a href="{% url 'password_change' %}">Cambiar contraseña</a>
+
+<h2>Mis posts</h2>
+{% for post in usuario.posts.all %}
+    <article><h3><a href="{% url 'post_detail' post.pk %}">{{ post.titulo }}</a></h3></article>
+{% empty %}
+    <p>Todavía no publicaste ningún post.</p>
+{% endfor %}
+{% endblock %}

@@ -7,7 +7,11 @@ from django.views.generic import (
     ListView, DetailView, CreateView, UpdateView, DeleteView
 )
 from .models import Post
-from .forms import RegistroForm
+from .forms import PostForm, RegistroForm
+from django.contrib.auth.views import LoginView
+from .forms import PostForm, RegistroForm, CustomAuthenticationForm, PerfilForm
+from django.contrib.auth.models import User
+from django.contrib.auth.views import PasswordChangeView
 
 
 # ---------- Registro ----------
@@ -83,3 +87,31 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         post = self.get_object()
         return self.request.user == post.autor
     
+class CustomLoginView(LoginView):
+    template_name = 'registration/login.html'
+    authentication_form = CustomAuthenticationForm
+
+
+class PerfilView(LoginRequiredMixin, DetailView):
+    model = User
+    template_name = 'registration/perfil.html'
+    context_object_name = 'usuario'
+    login_url = 'login'
+
+    def get_object(self):
+        return self.request.user
+
+
+class PerfilUpdateView(LoginRequiredMixin, UpdateView):
+    model = User
+    form_class = PerfilForm
+    template_name = 'registration/perfil_form.html'
+    success_url = reverse_lazy('perfil')
+    login_url = 'login'
+
+    def get_object(self):
+        return self.request.user
+    
+class CustomPasswordChangeView(PasswordChangeView):
+    template_name = 'registration/password_change_form.html'
+    success_url = reverse_lazy('perfil')  # en vez de password_change_done

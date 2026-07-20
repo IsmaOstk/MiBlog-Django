@@ -102,3 +102,12 @@ ul.errorlist {
     margin: 0 0 0.5rem 0;
     font-size: 0.9rem;
 }
+
+.alert-error {
+    background-color: #fdecea;
+    border: 1px solid #f5c2c0;
+    color: #c0392b;
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
