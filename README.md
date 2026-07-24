@@ -89,29 +89,26 @@ variables de entorno del servicio, nunca hardcodeada en el repositorio.
 
 ## Evidencia visual del funcionamiento
 
-> Reemplazá cada placeholder de abajo por una captura real de tu aplicación
-> (arrastrá la imagen en GitHub/Google Slides justo debajo de cada título).
+https://docs.google.com/presentation/d/1PQE7lxNhoewzjMzS6M2kjqsXULGCWiHEbNu_KPq4dYo/edit?usp=sharing
 
 ### Panel de administración
-_(captura de `/admin/` mostrando el listado de posts y usuarios)_
 
 ### Registro de usuario
-_(captura del formulario de registro completo)_
 
 ### Login — aviso de usuario inexistente
-_(captura del mensaje de error al intentar loguearse con un usuario que no existe, con el link a registro visible)_
+
 
 ### Listado de posts y búsqueda por autor
-_(captura del home mostrando el listado, y el mismo listado filtrado por autor)_
+_
 
 ### Detalle de un post
-_(captura de la vista de detalle de una entrada)_
+
 
 ### Crear / editar un post
-_(captura del formulario, con algún error de validación visible, por ejemplo un título muy corto)_
+
 
 ### Perfil de usuario
-_(captura de `/perfil/` mostrando los datos del usuario y sus propios posts)_
+
 
 ### Edición de perfil y cambio de contraseña
-_(captura del formulario de edición de perfil, y de la pantalla de cambio de contraseña)_
+
